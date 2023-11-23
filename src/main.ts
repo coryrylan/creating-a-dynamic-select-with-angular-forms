@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 import { of } from 'rxjs';
 import 'zone.js';
@@ -7,7 +8,7 @@ import 'zone.js';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   template: `
     <form [formGroup]="form" (ngSubmit)="submit()">
 
